@@ -1,3 +1,3 @@
 FROM ubuntu
 WORKDIR /tmp
-RUN echo "hello" > f1
+RUN echo "hello" > v1
