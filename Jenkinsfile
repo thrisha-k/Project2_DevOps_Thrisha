@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'docker run -d --name con_v1 thrisha123/project2image:v1'
+        sh 'docker run -t --name con_v1 thrisha123/project2image:v1'
       }
     }
   }
