@@ -9,10 +9,15 @@ pipeline {
 	sh 'docker build -t thrisha123/project2image:v1 .'
       }
     }
-    stage('Deploy') {
+    stage('Login') {
       steps {
-        sh 'docker run -it -d --name con_v1 thrisha123/project2image:v1'
+        sh 'docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
       }
+    }
+  }
+  post {
+    always {
+      sh 'docker logout'
     }
   }
 }
