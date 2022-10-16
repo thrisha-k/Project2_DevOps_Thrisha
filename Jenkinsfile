@@ -14,4 +14,5 @@ pipeline {
         sh 'docker run -d --name con_v1 thrisha123/project2image:v1'
       }
     }
+  }
 }
